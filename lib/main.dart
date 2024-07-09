@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/container_widget.dart';
 import 'package:myapp/news_container.dart';
+import 'package:myapp/row_widget.dart';
+import 'package:myapp/column.dart';
+import 'package:myapp/latihan_rowcolumn.dart';
+import 'package:myapp/latihan_layout.dart';
 
 void main() {
   runApp(myApp());
@@ -15,41 +19,29 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       title: 'Belajar Flutter',
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 94, 152, 254),
+        backgroundColor: Color.fromARGB(255, 191, 24, 24),
         appBar: AppBar(
-          title: Text('Belajar Flutter'),
+          title: Text('Biodata'),
           centerTitle: true,
           backgroundColor: Colors.pinkAccent,
         ),
-        body: NewsContainer(),
+        body: LatihanLayout(),
       ),
     );
   }
 }
 
-class NewWidget extends StatelessWidget {
-  const NewWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return BelajarContainer();
-  }
-}
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Halo Dunia',
-        style: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-          fontFamily: 'Poppins',
-        ),
+@override
+Widget build(BuildContext context) {
+  return Center(
+    child: Text(
+      'Halo Dunia',
+      style: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+        fontFamily: 'Poppins',
       ),
-    );
-  }
-
+    ),
+  );
+}
